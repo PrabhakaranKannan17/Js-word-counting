@@ -1,0 +1,426 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+.all {
+    display: wrap;
+    height: 100vh;
+}
+
+a{
+  font-family: "Trade Winds";
+  text-decoration: none;
+  color: black;
+}
+.home {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.home a {
+    padding: 5px 10px;
+    transition: all 1s;
+    position: relative;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.home a:hover::before {
+    background-color: red;
+    width: 100%;
+}
+
+.home a::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 0%;
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.5s;
+}
+
+/* .home a:hover::after {
+    background-color: rgb(83, 29, 230);
+    width: 100%;
+    height: 100%;
+}
+.home a::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    background-color: blue;
+    width: 0%;
+    height: 0%;
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s;
+} */
+.nav {
+    width: 100%;
+    background-color: #eba907;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px;
+    z-index: 999;
+}
+
+.menu{
+    display: none;
+}
+
+.check{
+    display:none;
+}
+
+.section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------------------------------------  HOME Section ----------------------------------------- */
+
+.homesection{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-image: url(./farm\ bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 30px;
+    padding-left: 80px;
+}
+.homesection h1{
+   font-size: 40px;
+}
+.homesection p{
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 500px;
+}
+.homebuttondiv{
+    display: flex;
+    gap: 20px;
+}
+.homeboxbutton{
+    background-color: #eba907;
+    padding: 10px 20px;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*---------------------------------------  Product Section ----------------------------------------- */
+
+
+.productsection{
+    /* height: 100vh; */
+    width: 100%;
+    /* background-color: lightgray; */
+}
+.productsectionhead{
+    width: 100%;
+    /* background-color: aqua; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    padding-top: 60px;
+}
+.productsectionhead p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.productsectionlist{
+    width: 100%;
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+    animation: scroll;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+}
+@keyframes scroll{
+    from{}
+    to{}
+}
+.productbox{
+    width: 20%;
+    border: 2px solid darkgoldenrod;
+    border-radius: 10px;
+    padding: 10px;
+}
+.productboxtop{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.productboxtop img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid darkgoldenrod;
+}
+.productboxbottom{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.productboxbottom button{
+    width: 100%;
+    background-color: saddlebrown;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+.productbox:hover{
+    transform: scale(1.050);
+}
+
+
+/*---------------------------------------  About Section ----------------------------------------- */
+
+.aboutsection{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    padding-top: 60px;
+    text-align: center;
+}
+.abouttop{
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abouttopleft{
+    height: 100%;
+    width: 50%;
+    background-color: limegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.abouttopright{
+    height: 100%;
+    width: 50%;
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abouttopright img{
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+}   
+.aboutbottom{
+    height: 50%;
+    width: 100%;
+    background-color: burlywood;
+    display: flex;
+} 
+.aboutbottomleft{
+    height: 100%;
+    width: 50%;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutbottomleft img{
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+}   
+.aboutbottomright{
+    height: 100%;
+    width: 50%;
+    background-color: peru;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+.aboutbottomright p{
+    font-size: 25px;
+    font-weight: bold;
+}       
+
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+    .nav .home {
+        position: fixed;
+        background-color:#eba907;
+        left: 120%;
+        top: 57px;
+        width: 100%;
+        height: 65vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        border-top: 1px solid black;
+
+    }
+    input:checked+.home{
+    left: 0px;
+    background-color:#eba907;
+    color: white;
+}
+
+.menu{
+    display: inline;
+}
+
+
+
+.homesection{
+    padding-left: 10px;
+}
+.homesection p{
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+
+
+
+.productbox{
+    width: 90%;
+}
+}
+
+
+
+
+.abouttop{
+    flex-direction: column;
+}
+.abouttopleft{
+    width: 100%;
+}
+.abouttopright{
+    width: 100%;
+}
+.aboutbottom{
+    flex-direction: column;
+}
+.aboutbottomleft{
+    width: 100%;
+}
+.aboutbottomright{
+    width: 100%;
+}
+   
+
+
+@media only screen and (min-width:600px) and (max-width:800px){
+
+.nav .home {
+        position: fixed;
+        background-color:#eba907;
+        left: 120%;
+        top: 57px;
+        width: 100%;
+        height: 65vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        border-top: 1px solid black;
+
+    }
+    input:checked+.home{
+    left: 0px;
+    background-color:#eba907;
+    color: white;
+}
+
+.menu{
+    display: inline;
+}
+
+}
+
+
+@media only screen and (min-width:600px) and (max-width:900px) {
+
+.homesection{
+    padding-top: 80px;
+    padding-left: 10px;
+}
+.homesection p{
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+/*---------------------------------------  Product Section ----------------------------------------- */
+
+.productbox{
+    width: 40%;
+}
+
+}
+
+
+
+@media only screen and (min-width:900px) and (max-width:1075px) {
+    .homesection{
+    padding-left: 50px;
+}
+.homesection p{
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 400px;
+}
+
+/*---------------------------------------  Product Section ----------------------------------------- */
+
+.productbox{
+    width: 25%;
+}
+}
+
+
+
